@@ -17,5 +17,11 @@ alias nid="npm install --save-dv"
 # npm scripts
 alias t="npm run test -- --testPathPattern"
 alias s="npm run storybook"
-alias d="npm run dev"
+alias dev="npm run dev"
 alias b="npm run build"
+
+# docker
+alias d="docker"
+alias dri="docker run -it"
+alias drd="docker run -dt"
+alias db="docker build -t"
