@@ -19,6 +19,7 @@ alias t="npm run test -- --testPathPattern"
 alias s="npm run storybook"
 alias dev="npm run dev"
 alias b="npm run build"
+alias nr="npm run"
 
 # docker
 alias d="docker"
