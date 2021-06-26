@@ -4,6 +4,19 @@ alias c="clear"
 alias serve="http-server"
 
 # git
+AWK_COMMIT_HASH='/^commit/{
+  commit_hash=$NF
+  getline
+  commit_user=$NF
+  if (commit_user !~ git_user) {
+    print commit_hash
+    exit 0
+  }
+}'
+
+alias last_commit="git log | awk -v git_user='$(git config user.email)' '${AWK_COMMIT_HASH}'"
+alias grl="git rebase -i $(last_commit)"
+
 alias gs="git status"
 alias gl="git log --graph --pretty"
 alias gc="git commit -m"
